@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf8">
+    <title>今天吃什么</title>
+</head>
+<table>
+    {% for dish in dish_list %}
+    <tr>
+        <td><a href="{{dish['url']}}" target="_blank">{{ dish['title'] }}</a></td>
+        <td><img src="{{dish['pic']}}" height="200" width="200"/><br/></td>
+        <td>{{dish['ingredient']}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
